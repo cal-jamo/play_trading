@@ -8,14 +8,15 @@ Have you ever wanted to get into investing, but haven't known what to invest in?
 
 ### Design
 
-![Mock]("Put design here")
+![Mock]("")
 
 Here is a sequence diagram that shows how to people would interact with the backend.
 
 ```mermaid
 sequenceDiagram
     actor Alice
-    actor Juan
+    actor Juan![IMG_0087](https://github.com/user-attachments/assets/88a39e5b-9194-4a3d-a9f0-33404ad482ef)
+
     actor Bud
     Alice->>Server: Bud + 1
     Server -->>Juan: Bud + 1
