@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Play Trade
 
-## Getting Started
+## Specification Deliverable
 
-First, run the development server:
+### Elevator pitch
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Have you ever wanted to get into investing, but haven't known what to invest in? Maybe you don't understand real estate? Maybe you are nervous to invest because you don't understand why stock prices of companies rise and fall. But what if you could invest in something that you're passionate about? Well now you can with "Play Trade"! Play Trade is an investment platform for all things sports and athletics. Invest in your favorite teams, or players. Maybe you are watching someone in college and have a good feeling about the future of their professional career, so you invest in them early on, and WIN BIG when they do! Someone you invested in signs a new endorsement deal? Watch the values of your stock rise. Invest in Play Trade today!
+
+### Design
+
+![Mock]("Put design here")
+
+Here is a sequence diagram that shows how to people would interact with the backend.
+
+```mermaid
+sequenceDiagram
+    actor Alice
+    actor Juan
+    actor Bud
+    Alice->>Server: Bud + 1
+    Server -->>Juan: Bud + 1
+    Server -->>Bud: Bud + 1
+    Juan->>Server: Alice + 1
+    Server -->>Bud: Alice + 1
+    Server -->>Alice: Alice + 1
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Secure login over HTTPS
+- Ability to select the question to decide
+- Display of choices
+- Ability to select, and change, top three choices
+- Totals from all users displayed in realtime
+- Ability for a user to lock in their top three
+- Results are persistently stored
+- Ability for admin to create and delete questions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Technologies
 
-## Learn More
+I am going to use the required technologies in the following ways.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **HTML** - Uses correct HTML structure for application. 6 HTML pages. One for login, Home, invest, Sports news, and Portfolio.
+- **CSS** - App styling that will be available to use on different screensizes although my target audience is a larger screen. Also using color contrast with the primary colors being black white, and electric blue.
+- **React** - Provides login, athlete investment display, applying buys and sells, displaying sports news as well as your portfolio and use of React for routing and components.
+- **Service** - Backend service with endpoints for:
+  - login
+  - retrieving athletes and their price
+  - retrieving sports news
+  - submitting purchases or issuing sales
+- **DB/Login** - Store users, investments, and athletes in database. Register and login users. Credentials securely stored in database. Can't buy and sell investments unless authenticated.
+- **WebSocket** - As each user buys or sells, the price and number of shares of athletes or teams changes for all users.
