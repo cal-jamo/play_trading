@@ -10,22 +10,6 @@ Have you ever wanted to get into investing, but haven't known what to invest in?
 
 ![Mock](IMG_0087.PNG)
 
-Here is a sequence diagram that shows how to people would interact with the backend.
-
-```mermaid
-sequenceDiagram
-    actor Alice
-    actor Juan!
-
-    actor Bud
-    Alice->>Server: Bud + 1
-    Server -->>Juan: Bud + 1
-    Server -->>Bud: Bud + 1
-    Juan->>Server: Alice + 1
-    Server -->>Bud: Alice + 1
-    Server -->>Alice: Alice + 1
-```
-
 ### Key features
 
 - Secure login over HTTPS
