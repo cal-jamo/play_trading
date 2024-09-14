@@ -8,7 +8,7 @@ Have you ever wanted to get into investing, but haven't known what to invest in?
 
 ### Design
 
-![Mock]("https://github.com/user-attachments/assets/88a39e5b-9194-4a3d-a9f0-33404ad482ef")
+![Mock]("IMG__0087.PNG")
 
 Here is a sequence diagram that shows how to people would interact with the backend.
 
